@@ -71,77 +71,57 @@
     <h1>Stellar Classification Prediction</h1>
 
     <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict') }}" method="post">
+    <form action="{{ url_for('predict')}}" method="post">
       <div class="input-group">
-        <label class="input-label">obj_ID:</label>
-        <input class="input-field" type="text" name="obj_ID" placeholder="obj_ID" required="required" />
+        <label class="input-label" for="alpha">alpha:</label>
+        <input class="input-field" type="text" id="alpha" name="alpha" placeholder="alpha" required="required" />
       </div>
       <div class="input-group">
-        <label class="input-label">alpha:</label>
-        <input class="input-field" type="text" name="alpha" placeholder="alpha" required="required" />
+        <label class="input-label" for="delta">delta:</label>
+        <input class="input-field" type="text" id="delta" name="delta" placeholder="delta" required="required" />
       </div>
       <div class="input-group">
-        <label class="input-label">delta:</label>
-        <input class="input-field" type="text" name="delta" placeholder="delta" required="required" />
+        <label class="input-label" for="u">u:</label>
+        <input class="input-field" type="text" id="u" name="u" placeholder="u" required="required" />
       </div>
       <div class="input-group">
-        <label class="input-label">u:</label>
-        <input class="input-field" type="text" name="u" placeholder="u" required="required" />
+        <label class="input-label" for="g">g:</label>
+        <input class="input-field" type="text" id="g" name="g" placeholder="g" required="required" />
       </div>
       <div class="input-group">
-        <label class="input-label">g:</label>
-        <input class="input-field" type="text" name="g" placeholder="g" required="required" />
+        <label class="input-label" for="r">r:</label>
+        <input class="input-field" type="text" id="r" name="r" placeholder="r" required="required" />
       </div>
       <div class="input-group">
-        <label class="input-label">r:</label>
-        <input class="input-field" type="text" name="r" placeholder="r" required="required" />
+        <label class="input-label" for="i">i:</label>
+        <input class="input-field" type="text" id="i" name="i" placeholder="i" required="required" />
       </div>
       <div class="input-group">
-        <label class="input-label">i:</label>
-        <input class="input-field" type="text" name="i" placeholder="i" required="required" />
+        <label class="input-label" for="z">z:</label>
+        <input class="input-field" type="text" id="z" name="z" placeholder="z" required="required" />
       </div>
       <div class="input-group">
-        <label class="input-label">z:</label>
-        <input class="input-field" type="text" name="z" placeholder="z" required="required" />
+        <label class="input-label" for="spec_obj_ID">spec_obj_ID:</label>
+        <input class="input-field" type="text" id="spec_obj_ID" name="spec_obj_ID" placeholder="spec_obj_ID" required="required" />
       </div>
       <div class="input-group">
-        <label class="input-label">run_ID:</label>
-        <input class="input-field" type="text" name="run_ID" placeholder="run_ID" required="required" />
+        <label class="input-label" for="redshift">redshift:</label>
+        <input class="input-field" type="text" id="redshift" name="redshift" placeholder="redshift" required="required" />
       </div>
       <div class="input-group">
-        <label class="input-label">cam_col:</label>
-        <input class="input-field" type="text" name="cam_col" placeholder="cam_col" required="required" />
+        <label class="input-label" for="plate">plate:</label>
+        <input class="input-field" type="text" id="plate" name="plate" placeholder="plate" required="required" />
       </div>
       <div class="input-group">
-        <label class="input-label">field_ID:</label>
-        <input class="input-field" type="text" name="field_ID" placeholder="field_ID" required="required" />
-      </div>
-      <div class="input-group">
-        <label class="input-label">spec_obj_ID:</label>
-        <input class="input-field" type="text" name="spec_obj_ID" placeholder="spec_obj_ID" required="required" />
-      </div>
-      <div class="input-group">
-        <label class="input-label">redshift:</label>
-        <input class="input-field" type="text" name="redshift" placeholder="redshift" required="required" />
-      </div>
-      <div class="input-group">
-        <label class="input-label">plate:</label>
-        <input class="input-field" type="text" name="plate" placeholder="plate" required="required" />
-      </div>
-      <div class="input-group">
-        <label class="input-label">MJD:</label>
-        <input class="input-field" type="text" name="MJD" placeholder="MJD" required="required" />
-      </div>
-      <div class="input-group">
-        <label class="input-label">fiber_ID:</label>
-        <input class="input-field" type="text" name="fiber_ID" placeholder="fiber_ID" required="required" />
+        <label class="input-label" for="MJD">MJD:</label>
+        <input class="input-field" type="text" id="MJD" name="MJD" placeholder="MJD" required="required" />
       </div>
 
       <button type="submit">Predict</button>
     </form>
 
-    <div class="prediction">
-      {{ prediction_text }}
+    <div>
+      {{prediction_text}}
     </div>
   </div>
 </body>
