@@ -1,3 +1,51 @@
-<h1>
-Hello World
-<h1>
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Stellar Classification Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+        <input type="text" name="obj_ID" placeholder="obj_ID" required="required" /><br>
+        <input type="text" name="alpha" placeholder="alpha" required="required" /><br>
+    	<input type="text" name="delta" placeholder="delta" required="required" /><br>
+        <input type="text" name="u" placeholder="u" required="required" /><br>
+        <input type="text" name="g" placeholder="g" required="required" /><br>
+        <input type="text" name="r" placeholder="r" required="required" /><br>
+        <input type="text" name="i" placeholder="i" required="required" /><br>
+        <input type="text" name="z" placeholder="z" required="required" /><br>
+        <input type="text" name="run_ID" placeholder="run_ID" required="required" /><br>
+        <input type="text" name="cam_col" placeholder="cam_col" required="required" /><br>
+        <input type="text" name="field_ID" placeholder="field_ID" required="required" /><br>
+        <input type="text" name="spec_obj_ID" placeholder="spec_obj_ID" required="required" /><br>
+        <input type="text" name="redshift" placeholder="redshift" required="required" /><br>
+        <input type="text" name="plate" placeholder="plate" required="required" /><br>
+        <input type="text" name="MJD" placeholder="MJD" required="required" /><br>
+        <input type="text" name="fiber_ID" placeholder="fiber_ID" required="required" /><br>
+
+       
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
