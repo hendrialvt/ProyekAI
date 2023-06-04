@@ -27,15 +27,29 @@ MJD = 55000
 ```
 ## Nilai Prediksi Galaksi
 ```python
-alpha = 140.0
-delta = 25.0
-u = 23.0
-g = 22.5
-r = 22.0
-i = 21.5
-z = 21.2
-spec_obj_ID = 4000
-redshift = 0.01
-plate = 6000
-MJD = 57000
+alpha = 130.8
+delta = 42.1
+u = 22.5
+g = 22.1
+r = 21.7
+i = 21.3
+z = 20.9
+spec_obj_ID = 10000
+redshift = 0.1
+plate = 8000
+MJD = 65000
+```
+## Nilai Prediksi QSO
+```python
+alpha = 140.2
+delta = 36.7
+u = 20.8
+g = 20.5
+r = 20.2
+i = 19.9
+z = 19.6
+spec_obj_ID = 5000
+redshift = 1.5
+plate = 4000
+MJD = 55000
 ```
