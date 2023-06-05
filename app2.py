@@ -2,8 +2,13 @@ import tensorflow as tf
 from flask import Flask, request, jsonify, render_template
 import numpy as np
 import joblib
+from pyngrok import ngrok
+
+port_no = 5000
 
 app = Flask(__name__)
+ngrok.set_auth_token('2QmGLebRRwE1E5QTHlZTRWmhcYM_7USqwEnLcXESiRFRFLHJV')
+public_url = ngrok.connect(port_no).public_url
 
 # Load model
 model = tf.keras.models.load_model('model.h5')
@@ -41,5 +46,7 @@ def predict():
     predicted_label = label_mapping.get(predicted_class)
     return render_template("home.html", prediction_text="Tipe Stellar adalah {}".format(predicted_label))
 
+print(f"Public URL {public_url}")
+
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=False,port=port_no)

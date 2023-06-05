@@ -74,48 +74,49 @@
     <form action="{{ url_for('predict')}}" method="post">
       <div class="input-group">
         <label class="input-label" for="alpha">alpha:</label>
-        <input class="input-field" type="text" id="alpha" name="alpha" placeholder="alpha" required="required" />
+        <input class="input-field" type="text" id="alpha" name="alpha" placeholder="0 — 360" required="required" />
       </div>
       <div class="input-group">
         <label class="input-label" for="delta">delta:</label>
-        <input class="input-field" type="text" id="delta" name="delta" placeholder="delta" required="required" />
+        <input class="input-field" type="text" id="delta" name="delta" placeholder="-20 — 85" required="required" />
       </div>
       <div class="input-group">
         <label class="input-label" for="u">u:</label>
-        <input class="input-field" type="text" id="u" name="u" placeholder="u" required="required" />
+        <input class="input-field" type="text" id="u" name="u" placeholder="9 — 33" required="required" />
       </div>
       <div class="input-group">
         <label class="input-label" for="g">g:</label>
-        <input class="input-field" type="text" id="g" name="g" placeholder="g" required="required" />
+        <input class="input-field" type="text" id="g" name="g" placeholder="9 — 33" required="required" />
       </div>
       <div class="input-group">
         <label class="input-label" for="r">r:</label>
-        <input class="input-field" type="text" id="r" name="r" placeholder="r" required="required" />
+        <input class="input-field" type="text" id="r" name="r" placeholder="9 — 33" required="required" />
       </div>
       <div class="input-group">
         <label class="input-label" for="i">i:</label>
-        <input class="input-field" type="text" id="i" name="i" placeholder="i" required="required" />
+        <input class="input-field" type="text" id="i" name="i" placeholder="9 — 33" required="required" />
       </div>
       <div class="input-group">
         <label class="input-label" for="z">z:</label>
-        <input class="input-field" type="text" id="z" name="z" placeholder="z" required="required" />
+        <input class="input-field" type="text" id="z" name="z" placeholder="9 — 33" required="required" />
       </div>
       <div class="input-group">
         <label class="input-label" for="spec_obj_ID">spec_obj_ID:</label>
-        <input class="input-field" type="text" id="spec_obj_ID" name="spec_obj_ID" placeholder="spec_obj_ID" required="required" />
-      </div>
+        <input class="input-field" type="text" id="spec_obj_ID" name="spec_obj_ID" placeholder="2.9 x 10^17 — 1.4 x 10^19" required="required" />
+      </div>     
       <div class="input-group">
         <label class="input-label" for="redshift">redshift:</label>
-        <input class="input-field" type="text" id="redshift" name="redshift" placeholder="redshift" required="required" />
+        <input class="input-field" type="text" id="redshift" name="redshift" placeholder="-0.1 — 8" required="required" />
       </div>
       <div class="input-group">
         <label class="input-label" for="plate">plate:</label>
-        <input class="input-field" type="text" id="plate" name="plate" placeholder="plate" required="required" />
+        <input class="input-field" type="text" id="plate" name="plate" placeholder="250 — 12600" required="required" />
       </div>
       <div class="input-group">
         <label class="input-label" for="MJD">MJD:</label>
-        <input class="input-field" type="text" id="MJD" name="MJD" placeholder="MJD" required="required" />
+        <input class="input-field" type="text" id="MJD" name="MJD" placeholder="51500 — 59000" required="required" />
       </div>
+      
 
       <button type="submit">Predict</button>
     </form>
